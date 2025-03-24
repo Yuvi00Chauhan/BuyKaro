@@ -1,0 +1,13 @@
+.checkout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+input{
+    margin-top: 5px;
+}
+label{
+    margin-top: 15px;
+}

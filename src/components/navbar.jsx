@@ -1,21 +1,25 @@
-import React from "react";
-class Navbar extends React.Component {
-  render() {
-    return (
-      <div>
-        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-          <div className="container-fluid">
-            <a id="navLogo" className="navbar-brand" href="#">
-              BuyKaro.com
-            </a>
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { CartContext } from "./CartContext"; 
+import "./navbar.css";
+function Navbar() {
+  const { cart } = useContext(CartContext); 
+  const cartCount = cart.length; 
 
-          
-              <a href=""className="cart-icon ms-auto">🛒 Cart</a>
-            </div>
-        </nav>
+  return (
+    <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div className="container-fluid">
+        <NavLink id="navLogo" className="navbar-brand" to={"/"}>
+          BuyKaro.com
+        </NavLink>
+
+       
+        <NavLink to={"/Cart"} className="cart-icon ms-auto ">
+          🛒 Cart {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+        </NavLink>
       </div>
-    );
-  }
+    </nav>
+  );
 }
 
 export default Navbar;
