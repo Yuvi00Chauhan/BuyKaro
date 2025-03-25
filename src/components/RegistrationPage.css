@@ -1,0 +1,42 @@
+body{
+    background-image: url(/public/register.jpg);
+    background: cover;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px; 
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-height: 80vh;
+    background: transparent;
+}
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 200px;
+}
+label{
+    width: 150px; 
+    font-weight: bold;
+    margin-right: 50px;
+}
+.user-image {
+    width: 100px;  
+    height: auto;  
+    display: block;
+    margin: 10px auto;  
+    border-radius: 50%;  
+  }
+  .form-container {
+    width: 800px;
+    border: 2px solid black; /* Correct border syntax */
+    margin: 10px auto; /* Centers the div horizontally */
+    padding: 20px; /* Adds some inner spacing */
+    text-align: center; /* Centers text inside the div */
+}

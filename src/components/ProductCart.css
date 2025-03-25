@@ -7,14 +7,13 @@
   text-align: center;
 }
 
-/* Cart Items */
+
 .cart-items {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Individual Cart Item */
 .cart-item {
   display: flex;
   align-items: center;
@@ -27,21 +26,21 @@
   transition: 0.3s ease-in-out;
 }
 
-/* Image Styling */
+
 .item-image {
   width: 60px;
   height: auto;
   border-radius: 5px;
 }
 
-/* Cart Item Details */
+
 .cart-item-details {
   flex-grow: 1;
   padding: 0 10px;
   text-align: left;
 }
 
-/* Remove Button */
+
 .remove-btn {
   
   color: red;
@@ -58,7 +57,7 @@
   background-color: darkred;
 }
 
-/* Footer (Total Price & Checkout Button) */
+
 .cart-footer {
   margin-top: 20px;
   padding: 15px;
@@ -70,14 +69,14 @@
   flex-wrap: wrap;
 }
 
-/* Total Price */
+
 .cart-total {
   font-size: 18px;
   font-weight: bold;
 }
 
-/* Checkout Button */
-.checkout-btn {
+
+.checkout-btn  {
   background-color: green;
   color: white;
   padding: 10px 20px;

@@ -21,6 +21,7 @@ function ProductListing() {
     if (productToAdd) {
       addToCart(productToAdd);
       console.log("Product added to cart:", productToAdd);
+      
     }
   };
 

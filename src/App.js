@@ -5,6 +5,7 @@ import Cart from "./components/ProductCart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
 import Checkout from "./components/Checkout";
+import RegisterationPage from "./components/RegisterationPage";
 function App() {
   return (
     console.log("getting products"),  
@@ -12,11 +13,12 @@ function App() {
 <CartProvider>
        <BrowserRouter>
       <Navbar />
+      <RegisterationPage/>
       <Routes>
-        <Route path="/" element={<ProductListing />} />
+        {/* <Route path="/" element={<ProductListing />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
-      
+         */}
       </Routes>
       </BrowserRouter>
      </CartProvider>

@@ -11,6 +11,11 @@ function Cart() {
   const handleRemove = (id) => {
     console.log(`Removing item with id: ${id}`);
     removeFromCart(id);
+    alert("Product removed from cart");
+  };
+
+  const handleCheckout = () => {
+    alert("Proceeding to checkout page");
   };
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
@@ -31,7 +36,6 @@ function Cart() {
                   <h4>Price: ${item.price.toFixed(2)}</h4>
                 </div>
 
-                {/* NavLink as Remove Button */}
                 <NavLink 
                   className="remove-btn fa fa-trash-o" 
                   onClick={() => handleRemove(item.id)}
@@ -44,7 +48,7 @@ function Cart() {
             <div className="cart-total">
               <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
             </div>
-            <NavLink to="/checkout" className="checkout-btn">
+            <NavLink to="/checkout" className="checkout-btn" onClick={handleCheckout}>
               Checkout
             </NavLink>
           </div>
