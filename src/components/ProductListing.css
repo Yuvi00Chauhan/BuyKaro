@@ -42,8 +42,7 @@ button {
   position: absolute;
   left: 80px;
   right: 80px;
-  bottom: 50px;
-  text-wrap: nowrap;
+  bottom: 0;
 }
 
 button:hover {
