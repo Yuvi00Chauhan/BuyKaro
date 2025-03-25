@@ -11,6 +11,7 @@ function Cart() {
   const handleRemove = (id) => {
     console.log(`Removing item with id: ${id}`);
     removeFromCart(id);
+   alert("Product removed from cart");
   };
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
