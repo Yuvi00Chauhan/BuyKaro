@@ -12,7 +12,7 @@ function LoginPage() {
     
         if (email === "admin@mail.com" && password === "admin@123") {
             alert("Login successful");
-            console.log("Navigating to /ProductListing"); // Debugging log
+            console.log("Navigating to /ProductListing"); 
             navigate("/ProductListing");
         } else {
             alert("Login failed");

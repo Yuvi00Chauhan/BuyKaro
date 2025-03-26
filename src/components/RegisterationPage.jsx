@@ -6,16 +6,16 @@ function RegisterationPage() {
   const navigate = useNavigate();
 
   const signup = (event) => {
-    event.preventDefault(); // Prevents page refresh
+    event.preventDefault(); 
     console.log("User registered");
     alert("Registration Successful, please login");
-    navigate("/Login"); // Navigate to login page
+    navigate("/Login"); 
   };
 
   return (
     <div className="form-container">
       <h1>Registration Page</h1>
-      {/* <img src="/images/user.png" alt="user.img" className="user-image" /> */}
+      
       <div className="checkout">
         <form onSubmit={signup}>
           <div>

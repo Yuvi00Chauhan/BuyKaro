@@ -7,7 +7,7 @@ function ProductListing() {
   const [products, setProducts] = useState([]);
   const { addToCart } = useContext(CartContext);
 
-  // Fetch Products from API
+  
   useEffect(() => {
     async function fetchProducts() {
       try {
@@ -22,7 +22,7 @@ function ProductListing() {
     fetchProducts();
   }, []);
 
-  // Function to handle adding product to cart
+  
   const handleAddToCart = (id) => {
     const productToAdd = products.find((product) => product.id === id);
     if (productToAdd) {
@@ -31,7 +31,7 @@ function ProductListing() {
     }
   };
 
-  // Function to truncate long product titles
+
   const truncateTitle = (title, maxLength=20) => {
     return title.length > maxLength ? title.substring(0, maxLength)  : title;
   };
@@ -44,8 +44,7 @@ function ProductListing() {
           <div key={product.id} className="col-xl-3">
             <Product
               id={product.id}
-              title={truncateTitle(product.title, 20)} // Limit title length
-              price={product.price}
+              title={truncateTitle(product.title, 20)}
               rating={product.rating?.rate}
               imageurl={product.image}
               addToCart={handleAddToCart}

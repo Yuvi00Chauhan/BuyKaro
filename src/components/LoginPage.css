@@ -1,4 +1,4 @@
-/* Centering Container */
+
 body{
     background-image: url("/public/images/background.jpg");
     background-size: cover;
@@ -15,13 +15,12 @@ body{
    
 }
 
-/* Login Form */
 .login-form {
    
     border-radius: 8px;
     width: 400px;
     text-align: center;
-    background: transparent; /* Fully transparent */
+    background: transparent; 
   
     border-radius: 8px; 
     box-shadow: none;
