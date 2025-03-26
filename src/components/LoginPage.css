@@ -1,0 +1,36 @@
+/* Centering Container */
+body{
+    background-image: url("/public/images/background.jpg");
+    background-size: cover;
+   
+    background-repeat: no-repeat;
+
+    background-size: cover;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+   margin-top: 100px;
+  
+   
+}
+
+/* Login Form */
+.login-form {
+   
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    background: transparent; /* Fully transparent */
+  
+    border-radius: 8px; 
+    box-shadow: none;
+   
+    text-align: center;
+}
+input{
+    
+}
+label{
+    width:75px;
+}

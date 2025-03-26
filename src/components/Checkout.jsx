@@ -2,11 +2,14 @@ import React from "react";
 import "./Checkout.css";
 import { NavLink } from "react-router-dom";
 function Checkout() {
+  const checkout = () => {
+    console.log("Order Placed");
+  }
   return (
     <div className="checkout-box">
       <h1>Checkout</h1>
       <p>Thank you for shopping with us!</p>
-      <form>
+      <form onSubmit={Checkout}>
         <div className="form-group">
           <label>Name:</label>
           <input type="text" placeholder="Enter your name" />
@@ -52,9 +55,7 @@ function Checkout() {
         </div>
         <div className="order-btn-container">
         <input type="submit" className="order-btn" id="" value="Sign Up" />
-        {/* <button type="button" className="order-btn" onClick={() => alert("Order placed successfully")}>
-          Place Order
-        </button> */}
+       
         </div>
       </form>
     </div>

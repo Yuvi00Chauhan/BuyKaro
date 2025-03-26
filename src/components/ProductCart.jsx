@@ -4,17 +4,9 @@ import { NavLink } from "react-router-dom";
 import "./ProductCart.css";
 
 function Cart() {
-  const { cart, removeFromCart } = useContext(CartContext);
-
-  console.log("Cart contents:", cart);
-
-  const handleRemove = (id) => {
-    console.log(`Removing item with id: ${id}`);
-    removeFromCart(id);
-   alert("Product removed from cart");
-  };
-
-  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+  const { cart } = useContext(CartContext);
+  
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
     <div className="cart-container">
@@ -26,21 +18,17 @@ function Cart() {
           <div className="cart-items">
             {cart.map((item) => (
               <div key={item.id} className="cart-item">
-                <img src={item.image} alt={item.title} className="item-image" />
+                <img src={item.imageurl} alt={item.title} className="item-image" />
                 <div className="cart-item-details">
                   <h4>{item.title}</h4>
                   <h4>Price: ${item.price.toFixed(2)}</h4>
+                  <h4>Quantity: {item.quantity}</h4> {/* Only display quantity, no controls */}
                 </div>
-
-                {/* NavLink as Remove Button */}
-                <NavLink 
-                  className="remove-btn fa fa-trash-o" 
-                  onClick={() => handleRemove(item.id)}
-                >
-                </NavLink>
               </div>
             ))}
           </div>
+
+          {/* Cart Footer - Total Price & Checkout */}
           <div className="cart-footer">
             <div className="cart-total">
               <h3>Total Price: ${totalPrice.toFixed(2)}</h3>

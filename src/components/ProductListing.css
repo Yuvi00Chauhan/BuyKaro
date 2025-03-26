@@ -21,6 +21,7 @@
   margin-top: 10px;
   position: relative;
   font: 15px;
+  border: 1px solid black;
 }
 
 .product-card img {
@@ -32,7 +33,7 @@
   margin: 10px auto;
 }
 button {
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 10px;
   background-color: #ff9900;
   color: white;
@@ -50,7 +51,7 @@ button:hover {
 }
 
 #heading {
-  color: #ff9900;
+  color: black;
 }
 
 #navLogo {
@@ -61,4 +62,11 @@ button:hover {
   font-size: 20px;
   margin-right: 10px;
   text-decoration: none;
+}
+.rating {
+  font-size: 16px;  
+  color: gold;       
+}
+h4{
+  margin-top: 20px;
 }

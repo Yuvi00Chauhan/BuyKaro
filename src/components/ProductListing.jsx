@@ -7,15 +7,22 @@ function ProductListing() {
   const [products, setProducts] = useState([]);
   const { addToCart } = useContext(CartContext);
 
+  // Fetch Products from API
   useEffect(() => {
-    async function getProducts() {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const data = await response.json();
-      setProducts(data);
+    async function fetchProducts() {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) throw new Error("Failed to fetch products");
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
     }
-    getProducts();
+    fetchProducts();
   }, []);
 
+  // Function to handle adding product to cart
   const handleAddToCart = (id) => {
     const productToAdd = products.find((product) => product.id === id);
     if (productToAdd) {
@@ -24,15 +31,20 @@ function ProductListing() {
     }
   };
 
+  // Function to truncate long product titles
+  const truncateTitle = (title, maxLength=20) => {
+    return title.length > maxLength ? title.substring(0, maxLength)  : title;
+  };
+
   return (
     <div className="container">
-      <h1 id="heading">Products details</h1>
+      <h1 id="heading">Product Details</h1>
       <div className="row">
         {products.map((product) => (
           <div key={product.id} className="col-xl-3">
             <Product
               id={product.id}
-              title={product.title}
+              title={truncateTitle(product.title, 20)} // Limit title length
               price={product.price}
               rating={product.rating?.rate}
               imageurl={product.image}

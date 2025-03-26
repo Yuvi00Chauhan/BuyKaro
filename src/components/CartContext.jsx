@@ -5,16 +5,36 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  // Function to add item (or update quantity if exists)
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      } else {
+        return [...prevCart, { ...product, quantity: 1 }];
+      }
+    });
   };
 
+  // Function to remove item (decrease quantity, or remove if 0)
   const removeFromCart = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0) // Remove if quantity reaches 0
+    );
   };
+
+  // Calculate total items in the cart
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount }}>
       {children}
     </CartContext.Provider>
   );

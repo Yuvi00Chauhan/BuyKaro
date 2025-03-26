@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root, .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.main-content {
+    flex: 1; /* Pushes the footer to the bottom */
+}
+
+/* Footer should be at the bottom */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto; /* Ensures footer is pushed to bottom */
+}
+a{
+    color: white;
+}
