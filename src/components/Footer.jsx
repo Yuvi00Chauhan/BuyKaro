@@ -6,11 +6,6 @@ function Footer() {
 
 <p className="col-md-4 mb-0 text-white">© 2024 BuyKaro.com, Inc</p>
 
-{/* <a href="/" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-  <p className="bi me-2" width={40} height={32}> 
-    BuyKaro.com
-  </p>
-</a> */}
 
 <ul className="nav col-md-4 justify-content-end">
   <li className="nav-item">

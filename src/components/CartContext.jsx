@@ -4,6 +4,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
 
   // Function to add item (or update quantity if exists)
   const addToCart = (product) => {
@@ -30,11 +31,16 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Calculate total items in the cart
+  
+  const loginUser = () => setIsLoggedIn(true);
+
+  
+
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, cartCount }}>
+    <CartContext.Provider 
+      value={{ cart, addToCart, removeFromCart, cartCount, isLoggedIn, loginUser,}}>
       {children}
     </CartContext.Provider>
   );
