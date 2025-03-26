@@ -1,3 +1,4 @@
+/* General Page Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -5,30 +6,43 @@ body {
     padding: 0;
 }
 
+/* Center the container */
 .container {
+   margin-top: 5px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
+/* Checkout Box */
 .checkout-box {
-    background: white;
-    width: 450px;
+    width: 90%; /* Adjusts width for smaller screens */
+    max-width: 450px; /* Keeps a defined max-width */
     padding: 20px;
-    margin: 50px auto;
+    margin: 20px auto;
     border-radius: 8px;
+    background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Heading & Text */
 h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 p {
     font-size: 14px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
+/* Form Styling */
 .form-group {
     display: flex;
     align-items: center;
@@ -43,69 +57,123 @@ label {
     text-align: left;
 }
 
+/* Input Fields */
 input {
-    width: 680%;
-    padding: 5px;
+    width: 65%; /* Adjusted to keep alignment proper */
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
 }
 
-.payment-options {
+/* Payment Section */
+.payment-group {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Payment Label */
+.payment-label {
     font-size: 14px;
     font-weight: bold;
+    width: 30%;
+    text-align: left;
 }
 
-.order-btn {
-    background-color: green;
-    color: white;
-    padding: 12px;
-    width: 50%;
-    max-width: 400px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.order-btn:hover {
-    background-color: darkgreen;
-}
+/* Payment Options - FIXED Alignment */
 .payment-options {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
     align-items: center;
-  }
-  
-  .payment-options label {
+    width: 70%;
+}
+
+/* Align radio button and label in same line */
+.payment-options label {
     display: flex;
     align-items: center;
     gap: 5px;
-  }
-  .order-btn {
-    display: block;
-    margin: 20px auto 0; /* Centers the button */
-    background-color: green;
-    color: white;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+/* Ensure radio button appears exactly before text */
+.payment-options input[type="radio"] {
+    margin-right: 5px; /* Keeps spacing uniform */
+    position: relative;
+    top: 1px; /* Fine-tune vertical alignment */
+}
+
+/* Order Button - FIXED BELOW THE FORM */
+.order-btn-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 5px;
+    color: black;
+    border: 1px solid black;
+}
+
+.order-btn-container {
     padding: 12px;
     width: 100%;
+    max-width: 450px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-  }
-  
-  .order-btn:hover {
+}
+.order-btn{
+    background-color: green;
+}
+.order-btn:hover {
     background-color: darkgreen;
-  }
-  
-  .form-group,
-  .payment-group {
-    margin-bottom: 15px;
-  }
-  
+}
+
+/* Responsive Fix */
+@media (max-width: 600px) {
+    .checkout-box {
+        width: 95%; /* Adjusts for smaller screens */
+        padding: 15px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .nav-link {
+        color: red;
+    }
+    input {
+        width: 100%;
+    }
+
+    .payment-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .plabel {
+        width: 100px;
+        margin-bottom: 5px;
+    }
+
+    .payment-options {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .order-btn {
+        width: 90%; /* Keeps button centered & responsive */
+    }
+}

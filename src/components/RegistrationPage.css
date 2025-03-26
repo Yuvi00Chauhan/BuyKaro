@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(/public/register.jpg);
+    /* background-image: url(/public/register.jpg); */
     background: cover;
 }
 .form {
@@ -12,7 +12,7 @@ body{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-height: 80vh;
-    background: transparent;
+
 }
 input {
     flex: 1;

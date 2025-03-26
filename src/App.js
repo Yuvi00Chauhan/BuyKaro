@@ -13,13 +13,13 @@ function App() {
 <CartProvider>
        <BrowserRouter>
       <Navbar />
-      {/* <RegisterationPage/> */}
-<Routes>
+      <RegisterationPage/>
+{/* <Routes>
    <Route path="/" element={<ProductListing />} />
   <Route path="/cart" element={<Cart />} />
    <Route path="/checkout" element={<Checkout />} />
 </Routes>
-      
+       */}
  </BrowserRouter>
      </CartProvider>
     </div>
