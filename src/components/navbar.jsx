@@ -16,11 +16,11 @@ function Navbar() {
           BuyKaro.com
         </NavLink>
         
-        <a className="nav-link">Home</a>
-        <a className="nav-link">Help center</a>
-        <a className="nav-link">Contact us</a>
-        <a className="nav-link">About us</a>
-        <a className="nav-link"> Account</a>
+        <a className="navi-link" href="#">Home</a>
+        <a className="navi-link" href="#">Help center</a>
+        <a className="navi-link" href="#">Contact us</a>
+        <a className="navi-link" href="#">About us</a>
+        <a className="navi-link" href="#"> Account</a>
         {/* Cart Icon with Dynamic Badge */}
         <NavLink to={"/Cart"} className="cart-icon ms-auto">
           🛒 Cart

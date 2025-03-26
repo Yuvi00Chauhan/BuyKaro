@@ -15,8 +15,9 @@
     top: -5px;
     right: -10px;
   }
-  .nav-link{
+  .navi-link{
     color: white;
   margin-left:140px;
+  text-decoration: none;
   }
   
