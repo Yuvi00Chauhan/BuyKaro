@@ -11,11 +11,16 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div className="container-fluid">
+      < div className="container-fluid">
         <NavLink id="navLogo" className="navbar-brand" to={"/ProductListing"}>
           BuyKaro.com
         </NavLink>
-
+        
+        <a className="nav-link">Home</a>
+        <a className="nav-link">Help center</a>
+        <a className="nav-link">Contact us</a>
+        <a className="nav-link">About us</a>
+        <a className="nav-link"> Account</a>
         {/* Cart Icon with Dynamic Badge */}
         <NavLink to={"/Cart"} className="cart-icon ms-auto">
           🛒 Cart
@@ -23,7 +28,7 @@ function Navbar() {
         </NavLink>
       </div>
     </nav>
-  );
+  ); 
 }
 
 export default Navbar;
