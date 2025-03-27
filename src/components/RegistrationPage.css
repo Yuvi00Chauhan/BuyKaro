@@ -47,4 +47,24 @@ label{
     margin: 10px auto; 
     padding: 20px; 
     text-align: center;
+    
+}
+.login-btn{
+    width: 100px;
+}
+.signup-btn{
+    width: 100px;
+}
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-container {
+        width: 95%;
+        padding: 10px;
+    }
 }

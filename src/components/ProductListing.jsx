@@ -35,18 +35,23 @@ function ProductListing() {
   const truncateTitle = (title, maxLength=20) => {
     return title.length > maxLength ? title.substring(0, maxLength)  : title;
   };
-
+  const truncatePrice = (price) => {
+    return parseFloat(price.toFixed(2));
+  };
+  
+  
   return (
-    <div className="container">
+    <div className="container ">
       <h1 id="heading">Product Details</h1>
       <div className="row">
         {products.map((product) => (
-          <div key={product.id} className="col-xl-3">
+          <div key={product.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
             <Product
               id={product.id}
               title={truncateTitle(product.title, 20)}
               rating={product.rating?.rate}
               imageurl={product.image}
+              price={truncatePrice(product.price*85.79)}
               addToCart={handleAddToCart}
             />
           </div>

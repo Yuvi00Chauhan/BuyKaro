@@ -11,12 +11,15 @@ function RegisterationPage() {
     alert("Registration Successful, please login");
     navigate("/Login"); 
   };
+  const login = () => {
+    navigate("/Login"); 
+  };
 
   return (
     <div className="form-container">
       <h1>Registration Page</h1>
       
-      <div className="checkout">
+      <div className="">
         <form onSubmit={signup}>
           <div>
             <label htmlFor="fname">First Name:</label>
@@ -48,6 +51,7 @@ function RegisterationPage() {
           </div>
           <div>
             <input type="submit" className="signup-btn" value="Sign Up" />
+            <input type="button" className="login-btn" value="Login" onClick={login} />
           </div>
         </form>
       </div>

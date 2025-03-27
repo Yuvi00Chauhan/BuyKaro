@@ -1,34 +1,54 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CartContext } from "./CartContext"; 
 import "./navbar.css";
 
 function Navbar() {
   const { cart } = useContext(CartContext); 
-  
-  // Calculate total quantity of items in the cart
+
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-      < div className="container-fluid">
+    <nav className="navbar">
+      <div className="container-fluid">
         <NavLink id="navLogo" className="navbar-brand" to={"/ProductListing"}>
           BuyKaro.com
         </NavLink>
-        
-        <a className="navi-link" >Home</a>
-        <a className="navi-link">Help center</a>
-        <a className="navi-link">Contact us</a>
-        <a className="navi-link">About us</a>
-        <a className="navi-link"> Account</a>
-        {/* Cart Icon with Dynamic Badge */}
-        <NavLink to={"/Cart"} className="cart-icon ms-auto">
-          🛒 Cart
-          {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
-        </NavLink>
+
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+
+       
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li className="navlink"><NavLink to="/ProductListing">Home</NavLink></li>
+          <li className="navlink"><NavLink to="/about">About Us</NavLink></li>
+          <li className="navlink"><NavLink  to="/contact">Contact Us</NavLink></li>
+          <li className="navlink"><NavLink  to="/account">Account</NavLink></li>
+          <li className="navlink"><NavLink to="/login">Logout</NavLink></li>
+
+          {/* Cart inside Hamburger (only visible in mobile) */}
+          <li className="cart-mobile">
+            <NavLink to={"/Cart"} className="cart-icon">
+              🛒 Cart
+              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+            </NavLink>
+          </li>
+        </ul>
+
+        {/* Cart in Navbar (only for large screens) */}
+        <div className="cart-desktop">
+          <NavLink to={"/Cart"} className="cart-icon">
+            🛒 Cart
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+          </NavLink>
+        </div>
       </div>
     </nav>
-  ); 
+  );
 }
 
 export default Navbar;

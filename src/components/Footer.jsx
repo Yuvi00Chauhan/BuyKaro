@@ -3,9 +3,9 @@ import "./Footer.css";
 function Footer() {
     return (
         <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-
-<p className="col-md-4 mb-0 text-white">© 2024 BuyKaro.com, Inc</p>
-
+<div className="company">
+<p className="col-md-4 mb-0 text-white">© 2025 BuyKaro.com, Inc</p>
+</div>
 
 <ul className="nav col-md-4 justify-content-end">
   <li className="nav-item">

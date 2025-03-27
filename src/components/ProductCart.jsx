@@ -21,7 +21,7 @@ function Cart() {
                 <img src={item.imageurl} alt={item.title} className="item-image" />
                 <div className="cart-item-details">
                   <h4>{item.title}</h4>
-                  <h4>Price: ${item.price.toFixed(2)}</h4>
+                  <h4>Price: ₹{item.price.toFixed(2)}</h4>
                   <h4>Quantity: {item.quantity}</h4> {/* Only display quantity, no controls */}
                 </div>
               </div>
@@ -31,7 +31,7 @@ function Cart() {
           {/* Cart Footer - Total Price & Checkout */}
           <div className="cart-footer">
             <div className="cart-total">
-              <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
+              <h3>Total Price: ₹{totalPrice.toFixed(2)}</h3>
             </div>
             <NavLink to="/checkout" className="checkout-btn">
               Checkout

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
-
 function LoginPage() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
@@ -32,6 +31,7 @@ function LoginPage() {
                             id="email" 
                             name="email" 
                             value={email}
+                            placeholder="admin@mail.com"
                             onChange={(e) => setEmail(e.target.value)}
                             required 
                         />
@@ -42,6 +42,7 @@ function LoginPage() {
                             type="password" 
                             id="password" 
                             name="password" 
+                            placeholder="admin@123"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required 
@@ -49,6 +50,7 @@ function LoginPage() {
                     </div>
                     <div>
                         <input type="submit" className="login-btn" value="Login" />
+                        <input type="button" className="register-btn" value="New User?" onClick={() => navigate("/register")} />
                     </div>
                 </form>
             </div>

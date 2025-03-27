@@ -1,23 +1,134 @@
+
+body, html {
+  overflow-x: hidden;
+}
+
+.navbar {
+  color: white;
+  position: relative;
+  z-index: 1000; 
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  background-color: black;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  box-sizing: border-box; 
+  text-wrap: nowrap;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.bar {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap:180px;
+  margin-top: 15px;
+  text-decoration: none !important;
+  
+
+}
+
 .cart-icon {
-    position: relative;
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .cart-badge {
-    background: red;
-    color: white;
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    right: -10px;
-  }
-  .navi-link{
-    color: white;
-  margin-left:140px;
+  font-size: 18px;
   text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.cart-badge {
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+
+.cart-desktop {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+
+.cart-mobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px 0;
+    margin-left: 20px;
+   
+  }
+
   
+  .cart-desktop {
+    display: none; 
+  }
+
+  .cart-mobile {
+    display: flex; 
+    justify-content: center;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav-links{
+    gap: 50px;
+   
+  }
+}

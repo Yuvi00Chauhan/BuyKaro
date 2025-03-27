@@ -2,7 +2,13 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import ProductListing from "./components/ProductListing";
 import Cart from "./components/ProductCart";
-import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import { CartProvider } from "./components/CartContext";
 import Checkout from "./components/Checkout";
 import RegisterationPage from "./components/RegisterationPage";
@@ -11,6 +17,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
+    
     <CartProvider>
       <BrowserRouter>
         <MainContent />
@@ -21,16 +28,15 @@ function App() {
 
 function MainContent() {
   const location = useLocation();
-  const hideNavAndFooter = ["/register", "/login"].includes(location.pathname);
 
   return (
     <div className="App">
       <div className="app-container">
-        {/* Show Navbar only if not on Register/Login */}
-        {!hideNavAndFooter && <Navbar />}
+        {/* ✅ Always Show Navbar */}
+        <Navbar />
 
         <Routes>
-          <Route path="/" element={<Navigate to="/Register" />} />
+          <Route path="/" element={<Navigate to="/register" />} />
           <Route path="/register" element={<RegisterationPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/ProductListing" element={<ProductListing />} />
@@ -38,11 +44,12 @@ function MainContent() {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
 
-        {/* Show Footer only if not on Register/Login */}
-        {!hideNavAndFooter && <Footer />}
+        {/* ✅ Always Show Footer */}
+        <Footer />
       </div>
     </div>
   );
 }
+
 
 export default App;

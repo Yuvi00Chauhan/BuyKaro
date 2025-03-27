@@ -27,9 +27,16 @@ body{
    
     text-align: center;
 }
-input{
-    
-}
+
 label{
-    width:75px;
+    width:100px;
+}
+.login-btn{
+    width: 85px;
+}
+.register-btn{
+    width: 85px;
+}
+.email{
+    margin-left: 0px;
 }

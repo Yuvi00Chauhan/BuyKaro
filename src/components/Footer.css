@@ -7,22 +7,46 @@ html, body {
 #root, .app-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
 }
 
 .main-content {
-    flex: 1; /* Pushes the footer to the bottom */
+    flex: 1; 
 }
 
-/* Footer should be at the bottom */
+.company{
+    text-wrap: nowrap;
+}
 footer {
-    background: #333;
+    background: black;
     color: white;
     text-align: center;
     padding: 10px;
     width: 100%;
-    margin-top: auto; /* Ensures footer is pushed to bottom */
+    margin-top: auto; 
 }
 a{
     color: white;
+}
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@media screen and (max-width: 768px) {
+    .nav-item {
+       display: none;
+    }
+  p{
+    text-wrap: nowrap;
+  }
+}
+.nav-item{
+    text-wrap: nowrap;
 }
