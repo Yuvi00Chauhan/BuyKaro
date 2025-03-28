@@ -21,7 +21,6 @@ body {
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
-  /* background-color: #fff; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -60,7 +59,7 @@ input {
   font-size: 14px;
 }
 
-/* Payment Section */
+
 .payment-group {
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ input {
   width: 100%;
 }
 
-/* Payment Label */
+
 .payment-label {
   font-size: 14px;
   font-weight: bold;
@@ -151,6 +150,6 @@ input {
   }
 
   .order-btn {
-    width: 90%; /* Keeps button centered & responsive */
+    width: 90%; 
   }
 }

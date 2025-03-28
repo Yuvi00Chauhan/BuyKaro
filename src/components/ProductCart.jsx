@@ -6,11 +6,14 @@ import "./ProductCart.css";
 function Cart() {
   const { cart } = useContext(CartContext);
 
-  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalPrice = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
   useEffect(() => {
     let myCart = JSON.parse(localStorage.getItem("cartDetails")) || [];
-    
+
     cart.forEach((item) => {
       const existingItem = myCart.find((cartItem) => cartItem.id === item.id);
       if (!existingItem) {
@@ -25,7 +28,7 @@ function Cart() {
     });
 
     localStorage.setItem("cartDetails", JSON.stringify(myCart));
-  }, [cart]); 
+  }, [cart]);
 
   return (
     <div className="cart-container">
@@ -34,19 +37,22 @@ function Cart() {
         <p>Your cart is empty.</p>
       ) : (
         <>
-       <div className="cart-items">
-  {cart.map((item) => (
-    <div key={item.id} className="cart-item">
-      <img src={item.imageurl} alt={item.title} className="item-image" />
-      <div className="cart-item-details">
-        <h4>{item.title}</h4>
-        <h4>Price: ₹{item.price.toFixed(2)}</h4>
-        <h4>Quantity: {item.quantity}</h4>
-      </div>
-    </div>
-  ))}
-</div>
-
+          <div className="cart-items">
+            {cart.map((item) => (
+              <div key={item.id} className="cart-item">
+                <img
+                  src={item.imageurl}
+                  alt={item.title}
+                  className="item-image"
+                />
+                <div className="cart-item-details">
+                  <h4>{item.title}</h4>
+                  <h4>Price: ₹{item.price.toFixed(2)}</h4>
+                  <h4>Quantity: {item.quantity}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
 
           <div className="cart-footer">
             <div className="cart-total">
