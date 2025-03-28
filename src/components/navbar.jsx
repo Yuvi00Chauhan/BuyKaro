@@ -9,6 +9,7 @@ function Navbar() {
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   const [menuOpen, setMenuOpen] = useState(false);
 
+ 
   return (
     <nav className="navbar">
       <div className="container-fluid">
@@ -27,10 +28,10 @@ function Navbar() {
         <li className="navlink"><NavLink to="/ProductListing">Home</NavLink></li>
           <li className="navlink"><NavLink to="/about">About Us</NavLink></li>
           <li className="navlink"><NavLink  to="/contact">Contact Us</NavLink></li>
-          <li className="navlink"><NavLink  to="/account">Account</NavLink></li>
           <li className="navlink"><NavLink to="/login">Logout</NavLink></li>
+          <li className="navlink" id="user"><NavLink  to="">Account</NavLink></li>
 
-          {/* Cart inside Hamburger (only visible in mobile) */}
+         
           <li className="cart-mobile">
             <NavLink to={"/Cart"} className="cart-icon">
               🛒 Cart
@@ -39,7 +40,7 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Cart in Navbar (only for large screens) */}
+
         <div className="cart-desktop">
           <NavLink to={"/Cart"} className="cart-icon">
             🛒 Cart

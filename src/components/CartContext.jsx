@@ -1,47 +1,40 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
+
 
 export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
+export function CartProvider({ children }) {
 
-  // Function to add item (or update quantity if exists)
-  const addToCart = (product) => {
+  const [cart, setCart] = useState(() => {
+    return JSON.parse(localStorage.getItem("cartDetails")) || [];
+  });
+
+
+  useEffect(() => {
+    localStorage.setItem("cartDetails", JSON.stringify(cart));
+  }, [cart]);
+
+
+  const addToCart = (item) => {
     setCart((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
+      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        return prevCart.map((cartItem) =>
+          cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
         );
-      } else {
-        return [...prevCart, { ...product, quantity: 1 }];
       }
+      return [...prevCart, { ...item, quantity: 1, image: item.imageurl }];
     });
   };
 
-  // Function to remove item (decrease quantity, or remove if 0)
+
   const removeFromCart = (id) => {
-    setCart((prevCart) =>
-      prevCart
-        .map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-        )
-        .filter((item) => item.quantity > 0) // Remove if quantity reaches 0
-    );
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
-  
-  const loginUser = () => setIsLoggedIn(true);
-
-  
-
-  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-
   return (
-    <CartContext.Provider 
-      value={{ cart, addToCart, removeFromCart, cartCount, isLoggedIn, loginUser,}}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
-};
+}

@@ -1,23 +1,29 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+
 function LoginPage() {
     const navigate = useNavigate();
-    const [email, setEmail] = useState("");
+    const [useremail, setUseremail] = useState("");
     const [password, setPassword] = useState("");
 
     const login = (event) => {
         event.preventDefault();
-    
-        if (email === "admin@mail.com" && password === "admin@123") {
-            alert("Login successful");
-            console.log("Navigating to /ProductListing"); 
+
+        // Get stored users from localStorage
+        let storedUsers = JSON.parse(localStorage.getItem("userDetails")) || [];
+
+        // Find user in stored data
+        let user = storedUsers.find((u) => u.email === useremail && u.pass === password);
+
+        if (user) {
+            alert("Welcome "+ user.fname);
+            console.log("Login successful");
             navigate("/ProductListing");
         } else {
             alert("Login failed");
         }
     };
-    
 
     return (
         <div className="login-container">
@@ -30,9 +36,9 @@ function LoginPage() {
                             type="email" 
                             id="email" 
                             name="email" 
-                            value={email}
+                            value={useremail} 
+                            onChange={(e) => setUseremail(e.target.value)}
                             placeholder="admin@mail.com"
-                            onChange={(e) => setEmail(e.target.value)}
                             required 
                         />
                     </div>
@@ -42,9 +48,9 @@ function LoginPage() {
                             type="password" 
                             id="password" 
                             name="password" 
-                            placeholder="admin@123"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            placeholder="admin@123"
                             required 
                         />
                     </div>

@@ -1,11 +1,14 @@
 import React from "react";
 import "./Checkout.css";
-import { NavLink } from "react-router-dom";
 function Checkout() {
-  const handlecheckout = () => {
-   
-    console.log("Order Placed");
-  }
+  
+  
+  const handlecheckout = (e) => {
+    e.preventDefault();
+    alert("Order Placed");
+ 
+  
+  };
   return (
     <div className="checkout-box">
       <h1>Checkout</h1>
@@ -13,7 +16,7 @@ function Checkout() {
       <form onSubmit={handlecheckout}>
         <div className="form-group">
           <label>Name:</label>
-          <input type="text" placeholder="Enter your name" required/>
+          <input type="text" placeholder="Enter your name" required />
         </div>
 
         <div className="form-group">
@@ -23,17 +26,17 @@ function Checkout() {
 
         <div className="form-group">
           <label>Address:</label>
-          <input type="text" placeholder="Enter your address" required/>
+          <input type="text" placeholder="Enter your address" required />
         </div>
 
         <div className="form-group">
           <label>City:</label>
-          <input type="text" placeholder="Enter your city" required/>
+          <input type="text" placeholder="Enter your city" required />
         </div>
 
         <div className="form-group">
           <label>State:</label>
-          <input type="text" placeholder="Enter your state" required/>
+          <input type="text" placeholder="Enter your state" required />
         </div>
 
         <div className="form-group">
@@ -41,10 +44,13 @@ function Checkout() {
           <input type="text" placeholder="Landmark" />
         </div>
 
-
         <div className="order-btn-container">
-        <input type="submit" className="order-btn" id="" value="Place Order" />
-       
+          <input
+            type="submit"
+            className="order-btn"
+            id=""
+            value="Place Order"
+          />
         </div>
       </form>
     </div>

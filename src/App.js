@@ -17,7 +17,6 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    
     <CartProvider>
       <BrowserRouter>
         <MainContent />
@@ -32,7 +31,7 @@ function MainContent() {
   return (
     <div className="App">
       <div className="app-container">
-        {/* ✅ Always Show Navbar */}
+       
         <Navbar />
 
         <Routes>
@@ -44,7 +43,7 @@ function MainContent() {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
 
-        {/* ✅ Always Show Footer */}
+       
         <Footer />
       </div>
     </div>

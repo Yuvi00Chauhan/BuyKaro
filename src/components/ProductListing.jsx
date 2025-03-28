@@ -32,7 +32,7 @@ function ProductListing() {
   };
 
 
-  const truncateTitle = (title, maxLength=20) => {
+  const truncateTitle = (title, maxLength=15) => {
     return title.length > maxLength ? title.substring(0, maxLength)  : title;
   };
   const truncatePrice = (price) => {
@@ -48,7 +48,7 @@ function ProductListing() {
           <div key={product.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">
             <Product
               id={product.id}
-              title={truncateTitle(product.title, 20)}
+              title={truncateTitle(product.title, 15)}
               rating={product.rating?.rate}
               imageurl={product.image}
               price={truncatePrice(product.price*85.79)}
