@@ -34,7 +34,7 @@ button {
     font-size: 16px;
     border-radius: 5px;
     transition: 0.3s ease;
-    position: absolute;
+    position: relative
 }
 
 
