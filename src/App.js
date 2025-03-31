@@ -14,6 +14,8 @@ import Checkout from "./components/Checkout";
 import RegisterationPage from "./components/RegisterationPage";
 import LoginPage from "./components/LoginPage";
 import Footer from "./components/Footer";
+import ContactUs from "./components/ContactUs";
+import About from "./components/About";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function MainContent() {
           <Route path="/ProductListing" element={<ProductListing />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
 
        

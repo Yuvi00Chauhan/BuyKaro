@@ -38,7 +38,7 @@ function LoginPage() {
                             name="email" 
                             value={useremail} 
                             onChange={(e) => setUseremail(e.target.value)}
-                            placeholder="admin@mail.com"
+                            placeholder="Enter your mail"
                             required 
                         />
                     </div>
@@ -50,7 +50,7 @@ function LoginPage() {
                             name="password" 
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            placeholder="admin@123"
+                            placeholder="Enter your password"
                             required 
                         />
                     </div>

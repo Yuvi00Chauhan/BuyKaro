@@ -1,6 +1,14 @@
 import React from "react";
 import "./Footer.css";
+import { useNavigate } from "react-router-dom";
 function Footer() {
+  const navigate = useNavigate();
+  const goToAbout = () => {
+    navigate("/about"); // Navigates to the About page
+  };
+  const goToHome = () => {
+    navigate("/productListing"); // Navigates to the About page
+  };
   return (
     <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
       <div className="company">
@@ -9,7 +17,7 @@ function Footer() {
 
       <ul className="nav col-md-4 justify-content-end">
         <li className="nav-item">
-          <a href="#" className="nav-link px-2 text-white">
+          <a href="#" className="nav-link px-2 text-white" onClick={goToHome}>
             Home
           </a>
         </li>
@@ -29,7 +37,7 @@ function Footer() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link px-2 text-white">
+          <a href="#about" className="nav-link px-2 text-white" onClick={goToAbout}>
             About
           </a>
         </li>
