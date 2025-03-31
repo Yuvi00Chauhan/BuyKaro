@@ -16,7 +16,7 @@ import LoginPage from "./components/LoginPage";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import About from "./components/About";
-
+import Account from "./components/Account";
 function App() {
   return (
     <CartProvider>
@@ -45,6 +45,7 @@ function MainContent() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About/>} />
+          <Route path="/account" element={<Account/>} />
         </Routes>
 
        

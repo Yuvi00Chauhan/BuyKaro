@@ -28,7 +28,7 @@ function Navbar() {
         <li className="navlink"><NavLink to="/ProductListing">Home</NavLink></li>
           <li className="navlink"><NavLink to="/about">About Us</NavLink></li>
           <li className="navlink"><NavLink  to="/contact">Contact Us</NavLink></li>
-          <li className="navlink" id="user"><NavLink  to="">Account</NavLink></li>
+          <li className="navlink" id="user"><NavLink  to="/account">Account</NavLink></li>
           <li className="navlink"><NavLink to="/login">Logout</NavLink></li>
          
 
