@@ -1,4 +1,4 @@
-/* Updated CSS */
+
 .cart-container {
   width: 90%;
   max-width: 800px;
@@ -35,28 +35,28 @@
 }
 
 .remove-btn {
-  background: transparent;
+  
   color: red;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+  background: white;
+  font-size:48px;
+  box-shadow: none;
   transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   margin-left: 600px;
- 
   position: absolute;
-  right: 10px; /* Ensures it's at the right */
+  right: 10px; 
   top: 50%;
-  bottom: 50%;
-  transform: translateY(-50%); /* Centers it vertically */
-}
+transform: translateY(-50%);
 
+}
 .remove-btn:hover {
-  color: darkred;
+  background: white !important; 
+  color: red !important;
+  box-shadow: none !important;
 }
 
 
@@ -86,6 +86,39 @@
   transition: 0.3s;
 }
 
-.checkout-btn:hover {
-  background-color: darkgreen;
+@media (max-width: 768px) {
+  .cart-item {
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px;
+  }
+
+  .cart-item-details {
+    font-size: 14px;
+    flex-grow: 1;
+  }
+
+  .remove-btn {
+    position: static;
+    margin-left: auto;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+  }
 }
+
+
+@media (max-width: 480px) {
+  .cart-item-details {
+    font-size: 12px; 
+  }
+
+  .remove-btn {
+    font-size: 22px;
+    width: 35px;
+    height: 35px;
+  }
+}
+

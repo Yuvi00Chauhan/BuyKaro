@@ -50,8 +50,8 @@ function Cart() {
                   <h4>Price: ₹{item.price.toFixed(2)}</h4>
                   <h4>Quantity: {item.quantity}</h4>
                 </div >
-                <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
-                  ❌
+                <button className="remove-btn fa fa-trash-o" onClick={() => removeFromCart(item.id)}>
+                  
                 </button>
               </div>
             ))}
