@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./ProductCart.css";
 
 function Cart() {
-  const { cart } = useContext(CartContext);
+  const { cart, removeFromCart } = useContext(CartContext);
 
   const totalPrice = cart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -49,7 +49,10 @@ function Cart() {
                   <h4>{item.title}</h4>
                   <h4>Price: ₹{item.price.toFixed(2)}</h4>
                   <h4>Quantity: {item.quantity}</h4>
-                </div>
+                </div >
+                <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+                  ❌
+                </button>
               </div>
             ))}
           </div>
