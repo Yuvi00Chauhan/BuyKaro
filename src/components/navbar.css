@@ -1,7 +1,11 @@
 
 body, html {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 .navbar {
   color: white;
@@ -9,7 +13,6 @@ body, html {
   z-index: 1000; 
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   background-color: black;
   width: 100%;
   max-width: 100%;
@@ -17,6 +20,36 @@ body, html {
   padding: 10px 20px;
   box-sizing: border-box; 
   text-wrap: nowrap;
+  height: 80px;
+}
+#navLogo {
+  color: #ff9900;
+}
+.cart-icon {
+  color: #ff9900;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.navlogo {
+  margin-right: 60px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between; 
+  flex-grow: 1; 
+  margin-top: 20px;
+  text-decoration: none !important;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.nav-links a {
+  text-decoration: none !important;
+  color: white !important;
 }
 
 
@@ -24,10 +57,6 @@ body, html {
   display: none;
   flex-direction: column;
   cursor: pointer;
-}
-.container-fluid {
-  width: 100%;
-  padding: 0 15px;
 }
 
 .bar {
@@ -37,27 +66,14 @@ body, html {
   margin: 4px 0;
 }
 
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap:180px;
-  margin-top: 15px;
-  text-decoration: none !important;
-  
-
-}
-
 .cart-icon {
   font-size: 18px;
   text-decoration: none;
   color: white;
   display: flex;
   align-items: center;
-}
-.nav-links a {
-  text-decoration: none !important;
-  color: white !important;
+  margin-right: 2px;
+  
 }
 
 .cart-badge {
@@ -73,7 +89,7 @@ body, html {
 .cart-desktop {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-left: 40px;
 }
 
 
@@ -81,6 +97,12 @@ body, html {
   display: none;
 }
 
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    gap: 20px; 
+  }
+}
 
 @media screen and (max-width: 768px) {
   .hamburger {
@@ -104,31 +126,16 @@ body, html {
   }
 
   .nav-links li {
-    padding: 15px 0;
-    margin-left: 20px;
-   
+    padding: 10px 0;
   }
 
-  
   .cart-desktop {
-    display: none; 
+    display: none;
   }
 
   .cart-mobile {
-    display: flex; 
+    display: flex;
     justify-content: center;
     padding: 10px 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav-links {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .nav-links{
-    gap: 50px;
-   
   }
 }

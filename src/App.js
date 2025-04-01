@@ -17,13 +17,18 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import About from "./components/About";
 import Account from "./components/Account";
+import ProductDetails from "./components/ProductDetails";
+import { ProductProvider } from "./components/ProductContext";
+
 function App() {
   return (
     <CartProvider>
+    <ProductProvider> 
       <BrowserRouter>
         <MainContent />
       </BrowserRouter>
-    </CartProvider>
+    </ProductProvider>
+  </CartProvider>
   );
 }
 
@@ -33,7 +38,6 @@ function MainContent() {
   return (
     <div className="App">
       <div className="app-container">
-       
         <Navbar />
 
         <Routes>
@@ -43,17 +47,16 @@ function MainContent() {
           <Route path="/ProductListing" element={<ProductListing />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/account" element={<Account/>} />
+          <Route path="/product/:id" element={<ProductDetails />} /> {/* Updated path to include product id */}
+          <Route path="/about" element={<About />} />
         </Routes>
 
-       
         <Footer />
       </div>
     </div>
   );
 }
-
 
 export default App;

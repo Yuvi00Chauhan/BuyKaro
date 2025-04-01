@@ -16,6 +16,7 @@
   width: 60px;
   height: auto;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .cart-item-details {

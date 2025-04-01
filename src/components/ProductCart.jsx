@@ -59,7 +59,7 @@ function Cart() {
 
           <div className="cart-footer">
             <div className="cart-total">
-              <h3>Total Price: ₹{totalPrice.toFixed(2)}</h3>
+              <h3>Cart total: ₹{totalPrice.toFixed(2)}</h3>
             </div>
             <NavLink to="/checkout" className="checkout-btn">
               Checkout
