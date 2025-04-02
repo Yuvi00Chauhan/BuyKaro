@@ -23,17 +23,17 @@ function Footer() {
 
       <ul className="nav col-md-4 justify-content-end">
         <li className="nav-item">
-          <a href="#" className="nav-link px-2 text-white" onClick={goToHome}>
+          <a   className="nav-link px-2 text-white" onClick={goToHome}>
             Home
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link px-2 text-white" onClick={goToFeatures}>
+          <a   className="nav-link px-2 text-white" onClick={goToFeatures}>
             Features
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link px-2 text-white" onClick={goToFAQs}>
+          <a   className="nav-link px-2 text-white" onClick={goToFAQs}>
             FAQs
           </a>
         </li>

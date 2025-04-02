@@ -11,7 +11,7 @@ function NavRibbon() {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -19,16 +19,16 @@ function NavRibbon() {
                Electronics
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Mobiles</a></li>
-                <li><a className="dropdown-item" href="#">Headphones</a></li>
-                <li><a className="dropdown-item" href="#">TWS</a></li>
+                <li><a className="dropdown-item"  >Mobiles</a></li>
+                <li><a className="dropdown-item"  >Headphones</a></li>
+                <li><a className="dropdown-item"  >TWS</a></li>
               </ul>
             </li>
             
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -36,16 +36,16 @@ function NavRibbon() {
                 TV & Appliances
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">TV</a></li>
-                <li><a className="dropdown-item" href="#">Washing Machine</a></li>
-                <li><a className="dropdown-item" href="#">Refridgerator</a></li>
+                <li><a className="dropdown-item"  >TV</a></li>
+                <li><a className="dropdown-item"  >Washing Machine</a></li>
+                <li><a className="dropdown-item"  >Refridgerator</a></li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -53,16 +53,16 @@ function NavRibbon() {
                 Home & Decor
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Paintings</a></li>
-                <li><a className="dropdown-item" href="#">Chalandier</a></li>
-                <li><a className="dropdown-item" href="#">Lights</a></li>
+                <li><a className="dropdown-item"  >Paintings</a></li>
+                <li><a className="dropdown-item"  >Chalandier</a></li>
+                <li><a className="dropdown-item"  >Lights</a></li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -70,15 +70,15 @@ function NavRibbon() {
                 Books
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Novels</a></li>
-                <li><a className="dropdown-item" href="#">Educational Books</a></li>
-                <li><a className="dropdown-item" href="#">Religious Books</a></li>
+                <li><a className="dropdown-item" >Novels</a></li>
+                <li><a className="dropdown-item" >Educational Books</a></li>
+                <li><a className="dropdown-item" >Religious Books</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -86,15 +86,15 @@ function NavRibbon() {
                 Sports
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Cricket</a></li>
-                <li><a className="dropdown-item" href="#">Volleyball</a></li>
-                <li><a className="dropdown-item" href="#">Football</a></li>
+                <li><a className="dropdown-item" >Cricket</a></li>
+                <li><a className="dropdown-item" >Volleyball</a></li>
+                <li><a className="dropdown-item" >Football</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -102,15 +102,15 @@ function NavRibbon() {
                 Furniture
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Chairs</a></li>
-                <li><a className="dropdown-item" href="#">Tables</a></li>
-                <li><a className="dropdown-item" href="#">Beds</a></li>
+                <li><a className="dropdown-item"  >Chairs</a></li>
+                <li><a className="dropdown-item"  >Tables</a></li>
+                <li><a className="dropdown-item"  >Beds</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle drops"
-                href="#"
+                 
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -118,9 +118,9 @@ function NavRibbon() {
                Clothing
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Men</a></li>
-                <li><a className="dropdown-item" href="#">Women</a></li>
-                <li><a className="dropdown-item" href="#">Kids</a></li>
+                <li><a className="dropdown-item"  >Men</a></li>
+                <li><a className="dropdown-item"  >Women</a></li>
+                <li><a className="dropdown-item"  >Kids</a></li>
               </ul>
             </li>
           </ul>
