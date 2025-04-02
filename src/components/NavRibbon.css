@@ -1,0 +1,19 @@
+.ribbon{
+    background-color: gray;
+    height: 30px;
+}
+.drops{
+    color: white;
+    
+}
+.drops{
+    color: white;
+}
+.dropdown{
+    margin-left: 75px;
+}
+@media screen and (max-width: 768px) {
+    .ribbon{
+        display: none;
+    }
+}

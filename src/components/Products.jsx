@@ -20,7 +20,7 @@ function Product({ id, title, imageurl, price, rating }) {
             <img src={imageurl} alt="Product"  onClick={() => handleProductClick(id)}  />
             <div className="product-details">
                 <h4 className="product-title">{title}</h4>
-                <h4>Price: ₹{price}</h4>
+                <h4 className="product-price">Price: ₹{price}</h4>
                 <h4 className="rating">{renderStars(rating)}</h4> 
                 <button onClick={() => addToCart({ id, title, imageurl, price, rating })} className="cart-button">
                     Add to Cart
