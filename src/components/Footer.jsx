@@ -38,7 +38,7 @@ function Footer() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#home" href="#about" className="nav-link px-2 text-white" onClick={goToAbout}>
+          <a href="#about" className="nav-link px-2 text-white" onClick={goToAbout}>
             About
           </a>
         </li>
