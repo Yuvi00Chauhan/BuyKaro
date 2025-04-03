@@ -154,3 +154,8 @@ body, html {
     padding: 8px 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .about{
+    display: none;
+  }
+}

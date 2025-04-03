@@ -53,3 +53,13 @@
     text-wrap: wrap;
     font-weight: bold;
 }
+@media screen and (max-width: 425px) {
+    .contact-form{
+ width: 300px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .contact-form{
+        width: 250px;
+           }
+       }
