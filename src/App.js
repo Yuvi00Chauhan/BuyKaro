@@ -43,7 +43,7 @@ function MainContent({ searchTerm, setSearchTerm }) {
         <Navbar setSearchTerm={setSearchTerm} />
         <NavRibbon/>
         <Routes>
-          <Route path="/" element={<Navigate to="/register" />} />
+          <Route  path="/" element={<Navigate to="/register" />} />
           <Route path="/register" element={<RegisterationPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/ProductListing" element={<ProductListing searchTerm={searchTerm} />} /> 
