@@ -11,6 +11,7 @@
           "text-wrap: nowrap"
         ]
       }
-    ]
+    ],
+    "manifest-file-extension": "off"
   }
 }

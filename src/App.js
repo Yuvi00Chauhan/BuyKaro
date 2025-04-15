@@ -22,6 +22,7 @@ import { ProductProvider } from "./components/ProductContext";
 import NavRibbon from "./components/NavRibbon"; 
 import FeaturePage from "./components/FeaturePage";
 import FAQsPage from "./components/FAQsPage";
+
 function App() {
   const [searchTerm, setSearchTerm] = useState(""); 
 

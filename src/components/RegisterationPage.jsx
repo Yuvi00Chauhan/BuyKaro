@@ -1,12 +1,16 @@
 import React from "react";
 import "./RegistrationPage.css";
 import { useNavigate } from "react-router-dom";
+import { auth, db } from "../firebaseConfig";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
 
 function RegistrationPage() {
   const navigate = useNavigate();
 
-  const signup = (event) => {
+  const signup = async (event) => {
     event.preventDefault();
+
     var currentDate = new Date();
     var Dob = new Date(event.target.dob.value);
 
@@ -17,33 +21,41 @@ function RegistrationPage() {
     let email = event.target.email.value;
     let pass = event.target.pass.value;
     let cpass = event.target.Cpass.value;
-    let userData = JSON.parse(localStorage.getItem("userDetails")) || [];
 
-  
+    // Age validation
     if (currentDate - Dob < 18 * 365 * 24 * 60 * 60 * 1000) {
       alert("You must be 18 years or older to register");
       return;
     }
 
-
+    // Password match validation
     if (pass !== cpass) {
       alert("Passwords do not match! Please enter the same password.");
       return;
     }
 
-    userData.push({
-      fname: fname,
-      lname: lname,
-      dob: dob,
-      phone: phone,
-      email: email,
-      pass: pass,
-    });
+    try {
+      // Step 1: Create user in Firebase Auth
+      const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
+      const uid = userCredential.user.uid;
 
-    localStorage.setItem("userDetails", JSON.stringify(userData));
-    console.log("User registered", userData);
-    alert("Registration Successful, please login");
-    navigate("/Login");
+      // Step 2: Store extra user data in Firestore
+      await setDoc(doc(db, "users", uid), {
+        fname,
+        lname,
+        dob,
+        phone,
+        email,
+        uid,
+      });
+
+      console.log("User registered", email);
+      alert("Registration Successful, please login");
+      navigate("/Login");
+    } catch (error) {
+      console.error("Firebase registration error:", error);
+      alert(error.message || "Registration failed.");
+    }
   };
 
   const login = () => {
