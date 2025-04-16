@@ -4,6 +4,7 @@
 ✅ **Product Listings** with real-time API fetching  
 ✅ **Shopping Cart** functionality using React Context API  
 ✅ **Search Functionality** for filtering products  
+✅ **Google Firebase** for user registration and user authetication  
 ✅ **Optimized Performance** with lazy loading  
 ✅ **Responsive Design** for all devices  
 
@@ -23,14 +24,15 @@
    ```sh
    npm start
    ```
-4. Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+4. Open **http://localhost:3000** in your browser.
 
 ---
 
 ## **⚙️ Tech Stack**  
 - **Frontend:** React, React Router, Context API  
 - **Styling:** CSS  
-- **Data Fetching:** `fetch()` from [FakeStore API](https://fakestoreapi.com/)  
+- **Data Fetching:** `fetch()` from [FakeStore API](https://fakestoreapi.com/)
+- **Database:** Google Firebase
 - **Deployment:** Netlify  
 
 ---
