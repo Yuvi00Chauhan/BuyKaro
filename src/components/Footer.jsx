@@ -15,10 +15,11 @@ function Footer() {
   const goToFAQs = () => {
     navigate("/faqs"); 
   };
+ 
   return (
-    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 border-top footer">
       <div className="company">
-        <p className="col-md-4 mb-0 text-white">© {new Date().getFullYear()} BuyKaro.com, Inc</p>
+        <p className="col-md-4 mb-0 text-white">&copy; {new Date().getFullYear()} BuyKaro.com, Inc</p>
       </div>
 
       <ul className="nav col-md-4 justify-content-end">
