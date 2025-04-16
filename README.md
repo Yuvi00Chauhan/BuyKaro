@@ -32,7 +32,7 @@
 - **Frontend:** React, React Router, Context API  
 - **Styling:** CSS  
 - **Data Fetching:** `fetch()` from [FakeStore API](https://fakestoreapi.com/)
-- **Database** Google Firebase
+- **Database:** Google Firebase
 - **Deployment:** Netlify  
 
 ---
