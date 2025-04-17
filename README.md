@@ -33,18 +33,7 @@
 - **Styling:** CSS  
 - **Data Fetching:** `fetch()` from [FakeStore API](https://fakestoreapi.com/)
 - **Database:** Google Firebase
-- **Deployment:** Netlify  
-
----
-
-## **🚀 Deployment (Netlify)**  
-1. Push your project to **GitHub**.  
-2. Go to **Netlify Dashboard** → Click **"New Site from Git"**.  
-3. Select your repository and configure build settings:  
-   - **Build Command:** `npm run build`  
-   - **Publish Directory:** `build/`  
-4. Click **"Deploy"** and wait for Netlify to finish.  
-5. 🎉 **Your project is live!**  
+- **Deployment:** Vercel  
 
 ---
 
