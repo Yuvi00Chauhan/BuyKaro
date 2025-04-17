@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.css"; // Import your CSS file for styling
 import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();
